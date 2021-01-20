@@ -30,10 +30,10 @@ if __name__ == '__main__':
     parser.add_argument("-task", default='ext', type=str, choices=['ext', 'abs'])
     parser.add_argument("-encoder", default='bert', type=str, choices=['bert', 'baseline'])
     parser.add_argument("-mode", default='train', type=str, choices=['train', 'validate', 'test', 'test_text'])
-    parser.add_argument("-bert_data_path", default='../bert_data_new/cnndm')
-    parser.add_argument("-model_path", default='../models/')
-    parser.add_argument("-result_path", default='../results/cnndm')
-    parser.add_argument("-temp_dir", default='../temp')
+    parser.add_argument("-bert_data_path", default='bert_data/cnndm')
+    parser.add_argument("-model_path", default='models/')
+    parser.add_argument("-result_path", default='results/cnndm')
+    parser.add_argument("-temp_dir", default='temp')
     parser.add_argument("-text_src", default='')
     parser.add_argument("-text_tgt", default='')
 
@@ -100,7 +100,7 @@ if __name__ == '__main__':
 
     parser.add_argument('-visible_gpus', default='-1', type=str)
     parser.add_argument('-gpu_ranks', default='0', type=str)
-    parser.add_argument('-log_file', default='../logs/cnndm.log')
+    parser.add_argument('-log_file', default='logs/cnndm.log')
     parser.add_argument('-seed', default=666, type=int)
 
     parser.add_argument("-test_all", type=str2bool, nargs='?',const=True,default=False)
